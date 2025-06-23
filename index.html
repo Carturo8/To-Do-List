@@ -21,7 +21,12 @@
 
         <!-- Main content area -->
         <main class="center-column-div">
+            <form action="javascript:void(0)" onsubmit="addTask()" autocomplete="off">
+                <input type="text" id="task-input" placeholder="Add a task" autofocus>
+                <button type="submit">Add task</button>
+            </form>
 
+            <ul id="task-list"></ul>
         </main>
 
         <!-- Footer with author info -->
@@ -32,4 +37,7 @@
 </body>
 
 <script src="./assets/js/main.js"></script>
+
+<!-- SweetAlert2 library for modern alerts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
