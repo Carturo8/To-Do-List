@@ -9,7 +9,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* Makes 1rem = 10px for easy scaling */
-    background-color: black;
+    background-color: white;
 }
 
 /* Layout container: full height with header, main, footer */
@@ -29,12 +29,22 @@ html {
     text-align: center;
 }
 
+.star-column-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
 /* Header section styling */
 header {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     font-size: 3rem;
-    color: white;
-    border-bottom: 2px solid white;
+    color: darkturquoise;
+    border-bottom: 2px solid grey;
 }
 
 /* Main content */
@@ -47,6 +57,19 @@ form {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+}
+
+#task-input {
+    padding: 2rem 0.5rem;
+    border: 2px solid grey;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: darkturquoise;
+    box-shadow: 0 0 0 3px rgba(125, 255, 150, 0.2);
 }
 
 /* Task list container */
@@ -127,6 +150,6 @@ footer {
     padding: 1rem 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
-    border-top: 2px solid white;
+    color: darkturquoise;
+    border-top: 2px solid grey;
 }
