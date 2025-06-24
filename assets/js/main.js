@@ -38,7 +38,6 @@ function createTaskElement(text) {
     task.appendChild(completeBtn);
     task.appendChild(editBtn);
     task.appendChild(deleteBtn);
-
     return task;
 }
 
@@ -55,7 +54,18 @@ function createCompleteButton(taskTextEl) {
     const btn = document.createElement("button");
     btn.textContent = "✅";
     btn.addEventListener("click", () => {
-        taskTextEl.classList.toggle("completed");
+        const isCompleted = taskTextEl.classList.toggle("completed");
+
+        //
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: isCompleted ? 'success' : 'info',
+            title: isCompleted ? 'Task completed successfully' : 'Task unmarked',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+        });
     });
     return btn;
 }
@@ -105,12 +115,11 @@ function createEditButton(taskTextEl, taskEl) {
                 icon: 'success',
                 title: 'Task updated successfully',
                 showConfirmButton: false,
-                timer: 1500,
+                timer: 2000,
                 timerProgressBar: true
             });
         }
     });
-
     return btn;
 }
 
@@ -120,6 +129,16 @@ function createDeleteButton(taskEl) {
     btn.textContent = "❌";
     btn.addEventListener("click", () => {
         taskEl.remove();
+
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'warning',
+            title: 'Task removed successfully',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true
+        });
     });
     return btn;
 }
