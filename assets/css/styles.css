@@ -9,7 +9,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* Makes 1rem = 10px for easy scaling */
-    background-color: white;
+    background-color: darkturquoise;
 }
 
 /* Layout container: full height with header, main, footer */
@@ -43,8 +43,8 @@ html {
 header {
     padding: 1.5rem 0;
     font-size: 3rem;
-    color: darkturquoise;
-    border-bottom: 2px solid grey;
+    color: white;
+    border-bottom: 2px solid white;
 }
 
 /* Main content */
@@ -61,14 +61,14 @@ form {
 
 #task-input {
     padding: 2rem 0.5rem;
-    border: 2px solid grey;
+    border: 4px solid lightgrey;
     border-radius: 4px;
     transition: all 0.2s ease;
 }
 
 #task-input:focus {
     outline: none;
-    border-color: darkturquoise;
+    border-color: lawngreen;
     box-shadow: 0 0 0 3px rgba(125, 255, 150, 0.2);
 }
 
@@ -150,6 +150,6 @@ footer {
     padding: 1rem 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: darkturquoise;
-    border-top: 2px solid grey;
+    color: white;
+    border-top: 2px solid white;
 }
